@@ -17,10 +17,10 @@ public class GUI implements ActionListener {
 
         frame = new JFrame();
 
-        JButton button = new JButton("- - - Kliknij - - -");
+        JButton button = new JButton("- - - Click - - -");
         button.addActionListener(this);
 
-        label = new JLabel("Ilosc kilnkniec: " + count);
+        label = new JLabel("Number of clicks " + count);
 
         panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
@@ -30,7 +30,7 @@ public class GUI implements ActionListener {
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Klikamy");
+        frame.setTitle("Clicking");
         frame.pack();
         frame.setVisible(true);
 
@@ -43,6 +43,6 @@ public class GUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         count++;
-        label.setText("Ilosc klikniec: " + count);
+        label.setText("Number of clicks " + count);
     }
 }
